@@ -378,11 +378,11 @@ const DUMMY_MEALS = const [
       'c5',
       'c10',
     ],
-    title: 'Asparagus Salad with Cherry Tomatoes',
+    title: 'Mbakhalou Saloum',
     affordability: Affordability.Luxurious,
     complexity: Complexity.Simple,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',
+        'https://lesateliersdeiba.files.wordpress.com/2019/01/mbaxals-50.jpg',
     duration: 30,
     ingredients: [
       'White and Green Asparagus',
