@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mealsApp/filter_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget listTileMaker(IconData icon, String text) {
+    Widget listTileMaker(IconData icon, String text, Function selectedDraw) {
       return ListTile(
         leading: CircleAvatar(
           child: Icon(
@@ -11,7 +12,7 @@ class MainDrawer extends StatelessWidget {
             size: 26,
           ),
         ),
-        onTap: () {},
+        onTap: selectedDraw,
         title: Text(
           text,
           style: TextStyle(fontSize: 24, fontFamily: 'Raleway'),
@@ -36,8 +37,12 @@ class MainDrawer extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        listTileMaker(Icons.restaurant, 'Meals'),
-        listTileMaker(Icons.settings, 'filter'),
+        listTileMaker(Icons.restaurant, 'Meals', () {
+          Navigator.of(context).pushNamed('/');
+        }),
+        listTileMaker(Icons.settings, 'filter', () {
+          Navigator.of(context).pushNamed(FilterScreen.routeName);
+        }),
       ],
     ));
   }
